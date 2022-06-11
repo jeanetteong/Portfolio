@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+			Author: Jeanette Ong
+			Date: 22 May 2022
+
+			Filename: feedback.html
+
+            Image Source: <sp logo>https://www.sp.edu.sg/images/default-source/default-album/sp-logo.png?sfvrsn=e2b890e2_4
+		-->
+
+    <title>Jeanette's Portfolio</title>
+    <meta charset="utf-8"/>
+    <link href="CSS/reset.css" rel="stylesheet"/>
+    <link href="CSS/styles.css" rel="stylesheet"/>
+    <script src="Javascript/formsubmit.js"></script>
+    <style>
+        nav > ul > li:last-of-type > a{
+        background-color:white;
+        color:black;
+        -webkit-text-stroke:0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>JEANETTE'S PORTFOLIO</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="sp_experience.html">SP EXPERIENCE</a></li>
+            <li><a href="career_options.html">CAREER OPTIONS</a></li>
+            <li><a href="feedback.html">FEEDBACK</a></li>
+        </ul>
+    </nav>
+
+    <form id="feedback" action="http://www.example.com/eportfolio/feedback" method="post">
+        <fieldset id="userInfo">
+            <legend>User Information</legend>
+            <div class="formRow">
+                <label for="name">Name</label>
+                <input name="userName" id="name" type="text" />
+            </div>
+
+            <div class="formRow">
+                <label for="mail">E-mail</label>
+                <input name="userEmail" id="mail" type="email" />
+            </div>
+
+            <div class="formRow">
+                <label for="phone">Phone Number</label>
+                <input name="userPhone" id="phone" type="tel" placeholder="nnnnnnnn" pattern="^\d{8}$" />
+            </div>
+
+            <div class="formRow">
+                <label for="company">Company</label>
+                <input name="userCompany" id="company" type="text" />
+            </div>
+
+            <input name="sendEmail" id="email" value="yes" type="checkbox" />
+            <label for="email">Send copy of feedback response via email</label>
+        </fieldset>
+
+        <fieldset id="feedbackInfo">
+            <legend>Share Your Feedback</legend>
+            <div class="formRow">
+                <label for="page">Favourite Page</label>
+                <select name="pageNum" id="page">
+                    <option value="page1">Home</option>
+                    <option value="page2">SP Experience</option>
+                    <option value="page3">Career Options</option>
+                    <option value="page4">Feedback</option>
+                </select>
+            </div>
+            <div class="formRow">
+                <label for="rangeBox">Rate my website<br />
+                    (0=poor; 10=great)</label><br />
+                0
+                <input name="websiteRate" id="rangeBox" type="range"
+                        value="5" step="1" min="0" max="10" /><br />
+                10
+            </div>
+            <label for="commBox">Any other feedback you would like to add on?</label>
+            <textarea name="userExp" id="commBox"></textarea>
+        </fieldset>
+
+        <div id="buttons">
+            <input type="submit" value="Submit Feedback" />
+            <input type="reset" value="Cancel" />
+        </div>
+    </form>
+
+    <footer>
+        <img src="Images/sp.png" alt=""/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <ul>
+            <li><a href="https://www.linkedin.com/company/linkedin/" class="fa fa-linkedin"></a></li>
+            <li><a href="https://twitter.com/twitter" class="fa fa-twitter"></a></li>
+            <li><a href="https://www.instagram.com/instagram/?hl=en" class="fa fa-instagram"></a></li>
+        </ul>
+    </footer>
+</html>
